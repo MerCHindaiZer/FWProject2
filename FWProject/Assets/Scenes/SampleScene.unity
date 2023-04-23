@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 522002}
   - component: {fileID: 522003}
   - component: {fileID: 522005}
-  - component: {fileID: 522004}
+  - component: {fileID: 522006}
   m_Layer: 0
   m_Name: ScriptObj
   m_TagString: Untagged
@@ -177,7 +177,86 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &522004
+--- !u!114 &522005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a832a4cfef35b4fb01a57088ab5e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item_Data:
+  - name: '-'
+    id: 0
+    img: {fileID: 21300000, guid: 874527a8267a6ec458671f2d01f91f6c, type: 3}
+    dmg: '-'
+    weight: '-'
+    resist: '-'
+  - name: NotAvailable
+    id: 1
+    img: {fileID: 21300000, guid: 83b942ae7e0d2ca44ab9cabef2889c4f, type: 3}
+    dmg: '-'
+    weight: '-'
+    resist: '-'
+  - name: CanBuy
+    id: 2
+    img: {fileID: 21300000, guid: 3d674b8f6ab8e2d4e9bccc3a97d97400, type: 3}
+    dmg: '-'
+    weight: '-'
+    resist: '-'
+  - name: RIfle
+    id: 3
+    img: {fileID: 21300000, guid: 355206de1bf8b1f4796db1f56c996076, type: 3}
+    dmg: 20
+    weight: 5
+    resist: '-'
+  - name: Pistol
+    id: 4
+    img: {fileID: 21300000, guid: 0361c4f9a1da3374188af26e449200a7, type: 3}
+    dmg: 10
+    weight: 1
+    resist: '-'
+  - name: armor1
+    id: 5
+    img: {fileID: 21300000, guid: f3b02efaaf931584b98a91fab8a2a239, type: 3}
+    dmg: '-'
+    weight: 1
+    resist: 3
+  - name: armor2
+    id: 6
+    img: {fileID: 21300000, guid: f3b02efaaf931584b98a91fab8a2a239, type: 3}
+    dmg: '-'
+    weight: 10
+    resist: 10
+  - name: helmet1
+    id: 7
+    img: {fileID: 21300000, guid: fea1f65d3dac7f44da9cf2ae2ecb4342, type: 3}
+    dmg: '-'
+    weight: 0.1
+    resist: 3
+  - name: helmet2
+    id: 8
+    img: {fileID: 21300000, guid: fea1f65d3dac7f44da9cf2ae2ecb4342, type: 3}
+    dmg: '-'
+    weight: 1
+    resist: 10
+  - name: 7.62
+    id: 9
+    img: {fileID: 21300000, guid: 3531a780db17fdd4da48b00a11909e5d, type: 3}
+    dmg: '-'
+    weight: 0.01
+    resist: '-'
+  - name: .44
+    id: 10
+    img: {fileID: 21300000, guid: b438e79711a138643ba7695d2f29e166, type: 3}
+    dmg: '-'
+    weight: 0.01
+    resist: '-'
+--- !u!114 &522006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,85 +286,6 @@ MonoBehaviour:
   Resist: {fileID: 425462618}
   price: 5
   FullAmmo: 128
---- !u!114 &522005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4a832a4cfef35b4fb01a57088ab5e5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Item_Data:
-  - name: '-'
-    id: 0
-    img: {fileID: 21300000, guid: 874527a8267a6ec458671f2d01f91f6c, type: 3}
-    dmg: '-'
-    weight: '-'
-    resist: '-'
-  - name: NotAvailable
-    id: 1
-    img: {fileID: 21300000, guid: 83b942ae7e0d2ca44ab9cabef2889c4f, type: 3}
-    dmg: 
-    weight: 
-    resist: 
-  - name: CanBuy
-    id: 2
-    img: {fileID: 21300000, guid: 3d674b8f6ab8e2d4e9bccc3a97d97400, type: 3}
-    dmg: 
-    weight: 
-    resist: 
-  - name: head
-    id: 3
-    img: {fileID: 21300000, guid: fea1f65d3dac7f44da9cf2ae2ecb4342, type: 3}
-    dmg: '-'
-    weight: 1
-    resist: 10
-  - name: head2
-    id: 4
-    img: {fileID: 21300000, guid: fea1f65d3dac7f44da9cf2ae2ecb4342, type: 3}
-    dmg: '-'
-    weight: 1
-    resist: 10
-  - name: curass
-    id: 5
-    img: {fileID: 21300000, guid: f3b02efaaf931584b98a91fab8a2a239, type: 3}
-    dmg: '-'
-    weight: 10
-    resist: 10
-  - name: jacket
-    id: 6
-    img: {fileID: 21300000, guid: f3b02efaaf931584b98a91fab8a2a239, type: 3}
-    dmg: '-'
-    weight: 1
-    resist: 3
-  - name: gun
-    id: 7
-    img: {fileID: 21300000, guid: 355206de1bf8b1f4796db1f56c996076, type: 3}
-    dmg: 20
-    weight: 5
-    resist: '-'
-  - name: pistol
-    id: 8
-    img: {fileID: 21300000, guid: 0361c4f9a1da3374188af26e449200a7, type: 3}
-    dmg: 10
-    weight: 1
-    resist: '-'
-  - name: 7.62
-    id: 9
-    img: {fileID: 21300000, guid: 3531a780db17fdd4da48b00a11909e5d, type: 3}
-    dmg: '-'
-    weight: 0.1
-    resist: '-'
-  - name: .44
-    id: 10
-    img: {fileID: 21300000, guid: b438e79711a138643ba7695d2f29e166, type: 3}
-    dmg: '-'
-    weight: 0.1
-    resist: '-'
 --- !u!1 &9511351
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,9 +872,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 522004}
+      - m_Target: {fileID: 522006}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
-        m_MethodName: Add_Item
+        m_MethodName: AddItemToInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 522004}
+      - m_Target: {fileID: 522006}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: Shoting
         m_Mode: 1
@@ -1562,9 +1562,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 522004}
+      - m_Target: {fileID: 522006}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
-        m_MethodName: DeleteItem
+        m_MethodName: RemoveItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2053,7 +2053,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 522004}
+      - m_Target: {fileID: 522006}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: AddBullet
         m_Mode: 1
