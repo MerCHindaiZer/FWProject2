@@ -1,24 +1,29 @@
 using UnityEngine;
-public partial class Inventory : MonoBehaviour
+public class RenderingInventory : MonoBehaviour
 {
+    public Inventory inventory;
+    public AnimatingInventory animatingInventory;
+    public ItemStatistics statistics;
+    public CreatingItems creatingItems;
     public void Start()
     {
-        if (items.Count == 0)
+        if (inventory.items.Count == 0)
         {
-            AddGraphics();
+            animatingInventory.AddGraphics();
         }
-        for (int i = UnavailableID; i < maxCount; i++)
+        for (int i = inventory.UnavailableID; i < inventory.maxCount; i++)
         {
-            AddItem(i, Data.Item_Data[1], 1);
+            creatingItems.AddItem(i, inventory.Data.Item_Data[1], 1);
         }
     }
     public void Update()
     {
-        if (currentID != -1)
+        if (inventory.currentID != -1)
         {
-            MoveObject();
+            animatingInventory.MoveObject();
         }
-        UpdateInventory();
+        animatingInventory.UpdateInventory();
+        statistics.UpdateFlorens();
     }
 
 }
