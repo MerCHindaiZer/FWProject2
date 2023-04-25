@@ -2,15 +2,20 @@ using UnityEngine;
 public class InventoryOptions : MonoBehaviour
 {
     public Inventory inventory;
+
     public AnimatingInventory animatingInventory;
+
     public ItemStatistics statistics;
+
     public int price;
-    //public EventSystem es;
+
     public void AddItemToInventory()
     {
         int i = Random.Range(0, inventory.UnavailableID);
         if (inventory.items[i].id == 0)
+        {
             animatingInventory.creatingItems.AddItem(i, inventory.Data.Item_Data[Random.Range(3, inventory.Data.Item_Data.Count)], 1);
+        }
         else
         {
             if (inventory.items.Find(p => p.id == 0) != null)
@@ -38,7 +43,9 @@ public class InventoryOptions : MonoBehaviour
             bullet.count--;
         }
         else
+        {
             Debug.Log(message: "No ammo in inv.");
+        }
     }
     public void SearchForSameItem(Item item, int count) // для стыковки патронов 
     {

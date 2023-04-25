@@ -2,9 +2,13 @@ using UnityEngine;
 public class RenderingInventory : MonoBehaviour
 {
     public Inventory inventory;
+
     public AnimatingInventory animatingInventory;
+
     public ItemStatistics statistics;
+
     public CreatingItems creatingItems;
+
     public void Start()
     {
         if (inventory.items.Count == 0)
